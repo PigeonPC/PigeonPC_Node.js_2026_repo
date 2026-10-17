@@ -1,0 +1,33 @@
+import path from 'path';
+
+console.log(path.resolve()); //Vi får mappen på der nodemon kører fra
+
+Vi kan få vores path 
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve('./public/frontpage/index.html')
+})
+
+------------------------------------------------
+
+NÅR MAN LAVER
+app.get('/redirection', (req, res) => {
+    res.sendFile(path.resolve('./public/redirection.html'))
+})
+
+Vi laver en GET route, på endpointet /redirection, via. en callback funktion
+der håndterer en fil.
+
+------------------------------------------------
+
+REDIRECTION FRA HTML TIL HTML
+
+Man kan bruge et ANCHOR tager
+<a href="/">Tekst</a>
+
+Eller man kan bruge DYNAMISK REDIRECTION via. script tag
+<script>
+        setTimeout(() => {
+            console.log(123);
+            window.location.href = "/";
+        }, 3000);
+</script>

@@ -1,0 +1,85 @@
+PUBLIC MAPPEN
+
+alt i public mappene er PUBLIC!
+Når man server public mappen som static, kan de serves public.
+
+Når man tilføjer denne linje til app.js:
+
+    app.use(express.static('public'));
+
+Giver den adgang til CSS filen!! Dvs den er public!!
+Den gør public mappen static!
+Vi opdeler public mappen i flere undermapper, for overskueligheds skyld.
+
+Det er en sikkerhedsfeature, at man fx ikke kan skrive 
+Localhost:8080/.env
+Eller lign, så man bare kunne skrive en mappestruktur URL.
+Derfor findes en public mappe, der styrer hvilke filer, der er public!
+
+----------------------------------------------
+
+CIRCULAR DEPENDENCY PROBLEM
+
+Hvad gør man hvis man har tre filer, der alle er afhængige af hinanden i en trekant.
+
+    <script type="module" src="/fruits/fruits.js"></script>
+Man kan definere en fil som Modul!
+Det betyder at man kan bruge den som en form for master, der kan importere de andre filer.
+
+I fruits.js har vi tilføjet
+    import fruitProcessingPlant from './fruitsOrchard.js'
+
+Og i fruitsOrchard.js tilføjet *DEFAULT FUNCTION!*
+        export default function fruitProcessingPlant()  {
+        return ["orange", "apple", "cherry", "bird"]
+    };
+
+ELLER BARE FUNCTION
+OG SÅ EXPORT DEFAULT VED SIDEN AF
+
+-------------------------------------------------------
+
+Hvordan importerer man i de forskellige typer
+
+
+                NODE                FRONTEND.JS
+
+
+COMMON JS       require             script"src"
+                Module.exports
+
+
+ES MODULES      Import              Import
+                Export              Export Default
+
+
+
+Når man bruger require kan man importere flere typer, fx json
+Det kan man ikke med import!
+
+Nogen gange skal man definere ting som module, i package.js elelr json?????
+-----------------------------------------------------
+
+Vi går tilbare til 02/first server
+
+proxy = en mellemmand
+
+---------------------------------------------------------
+
+FETCH
+
+fetch('')
+.then((response) => console.log(response))
+
+Asyknront, fordi vi fetcher og netværk tager tid.
+Streams er asynktone også
+
+LÆS OP PÅ FETCH
+
+------------------------------------------------
+
+VERCEL STATIC FILES!
+Se anders appeksempel!
+
+------------------------------------------------
+

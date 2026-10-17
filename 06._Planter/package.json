@@ -1,0 +1,29 @@
+{
+  "name": "planter",
+  "version": "0.0.1",
+  "description": "A website for keeping track of plantcare",
+  "keywords": [
+    "plants",
+    "plant",
+    "plant",
+    "care",
+    "sunlight",
+    "nurture",
+    "nature",
+    "water"
+  ],
+  "license": "ISC",
+  "author": "PigeonPC",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env PORT=80 node app.js",
+    "start-dev": "cross-env PORT=9090 nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
+  }
+}

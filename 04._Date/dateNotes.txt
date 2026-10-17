@@ -1,0 +1,22 @@
+
+DATE!!
+
+console.log(new Date)
+    Printer UTC - Zuli time
+    2026-09-18T08:05:30.770Z
+
+console.log(Date())
+    Printer
+    Fri Sep 18 2026 10:07:29 GMT+0200 (Central European Summer Time)
+    Local time
+
+console.log(Date.now());
+    Printer
+    1789719016499
+    Unix Epoch Time
+    Seconds since Jan. 1st 1970
+
+_______________________________________
+
+ISO 8601 
+Er standarden for skrivemåden af datoer!

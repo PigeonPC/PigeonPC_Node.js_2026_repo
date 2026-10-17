@@ -1,0 +1,45 @@
+
+i JSON har vi
+dependencies
+scripts
+Andre ting??... søg
+
+I SCRIPTS kan man skrive shell kommandoer
+npm run scriptname
+
+_______________________________________
+
+MILJØVARIABLER
+
+console.log(process);
+console.log(process.env);
+process.env er et objekt
+
+.env er en PAKKE
+ikke hvordan MILJØVARIABLER virker natively i nodemon
+
+
+
+ "scripts": {
+    "start": "cross-env PORT=80 node app.js",
+    "start-dev": "cross-env PORT=9090 nodemon app.js"
+  },
+  Cross env gør det muligt at køre det her i forskellge terminaler / styresystemer
+  crossenv tager argumenter og kalder node
+  det er en wrapper for node!
+
+  ----------------------------------------
+
+  SHORT CIRCUT OPERATOR og NULLISH COALESCENCE
+
+Den fortsætter videre, hvis det til venstre er false
+console.log(undefined || 8080);
+
+const PORT = process.env.PORT || 8080;
+
+// nullish coalescence
+console.log(undefined ?? 8080);
+console.log("" ?? 8080);
+
+-------------------------------------------
+

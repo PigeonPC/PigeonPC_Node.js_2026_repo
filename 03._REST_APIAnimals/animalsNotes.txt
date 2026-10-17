@@ -1,0 +1,67 @@
+
+THE THREE REST CONVENTION!
+
+    - Using the right HTTP verb.
+
+    - Ordering (GET, POST, PUT, PATCH, DELETE))
+
+    - Naming (noun, plural) that maps to collections in your system.
+
+_____________________________________________________________________
+
+HUSK KORREKT RÆKKEFØLGE:
+
+GET     /animals
+GET     /animals/{id}
+POST    /animals
+PUT     /animals/{id}
+PATCH   /animals/{id}
+DELETE  /animals/{id}
+
+_____________________________________________________________________
+
+CLIENT - SERVER MODEL
+Husk du kun kan sende én req-res i en funktion!
+Ikke flere res til én req!
+
+_____________________________________________________________________
+
+Husk at importe:
+- express
+- JSON parser, hvis behov! Det har man når man tage imod JSON(post) fra browseren!. Den skal kunne oversætte!
+
+_____________________________________________________________________
+
+Hvad returnerer .findIndex hvis den ikke finder noget?
+-1
+
+_____________________________________________________________________
+
+PRE-FIX og POST-FIX value
+let value = 1;
+
+Pre-fix: Hvis man tilføjer ++ efter value, bliver den først plusset efter!
+console.log(value++)
+Printer 1!
+
+console.log(++value)
+Printer 2!
+
+_____________________________________________________________________
+
+HVAD GØR DET SIDSTE [0] I DEN HER SÆTNING??
+  const deletedAnimal = animals.splice(deleteAnimalIndex, 1)[0];
+
+Splice returnerer et Array med de slettede objekter.
+Når man tilføjer [0], returnerer den ikke hele listen, men i stedet objektet på index 0.
+Det er pænere at få returneret ét objekt, end ét objekt inde i et array.
+
+_____________________________________________________________________
+
+Ting der er false:
+NaN
+"" (tom string)
+False
+Undefined
+0
+Null

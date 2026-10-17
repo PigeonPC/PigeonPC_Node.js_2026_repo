@@ -1,0 +1,70 @@
+HOW TO RUN THE PROGRAM!
+
+    node ./dir/app.js
+
+    nodemon.cmd ./dir/app.js
+____________________________
+
+HOW TO START A NEW DIR!
+
+    make package.json
+
+    {
+        "dependencies": {
+            "express": "5.2.1"
+        }
+    }
+
+    OR run
+    npm install express after adding {}
+
+____________________________
+
+COMMON JS
+HOW TO START A NEW app.js
+
+    const express = require('express');
+    const app = express();
+
+    app.listen(8080);
+
+
+____________________________
+
+ES MODULES
+HOW TO START A NEW app.js
+
+    import express from 'express';
+    const app = express();
+    
+    app.listen(8080);
+
+____________________________
+
+ADD ERROR TO app.listen!
+
+    const PORT = 8080;
+
+    app.listen(PORT, (error) => {
+        if (error) {
+            console.log(error);
+            return;
+        }
+        console.log("Server is running on port", PORT);
+    });
+
+____________________________
+npm init
+
+package name: (06._planter) planter
+version: (1.0.0) 0.0.1
+description: A website for keeping track of plantcare
+entry point: (index.js) app.js
+test command: 
+git repository: 
+keywords: plants, plant, plant care, sunlight, nurture, nature, water
+author: PigeonPC
+license: (ISC) 
+type: (commonjs) module
+
+Bagefter skriv npm install express
