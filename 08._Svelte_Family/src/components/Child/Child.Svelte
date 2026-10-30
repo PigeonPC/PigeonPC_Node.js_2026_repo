@@ -1,5 +1,5 @@
 <script>
-    const { name, familySheep, isGirl, onShowLove } = $props();
+    let { name, familySheep, isGirl, onShowLove, onEatCookie, cookieCount=$bindable() } = $props();
 
 </script>
 
@@ -11,6 +11,7 @@
     <h2>I am {name}</h2>
 
     <button onclick={() => onShowLove(name)}>Show loved</button>
+    <button onclick={onEatCookie}>Eat Cookie</button>
 
 </div>
 
@@ -31,6 +32,11 @@
 
     .is-boy {
         border: 1px dashed yellow;
+    }
+
+    button {
+        color: blue;
+        background-color: pink;
     }
 
 </style>
