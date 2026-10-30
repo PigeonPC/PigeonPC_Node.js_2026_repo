@@ -1,7 +1,7 @@
-console.log("hello");
+// task add to the footer so that it says ©2026 right now but always the current year
 
-const currentYear = new Date().getFullYear();
+const year = new Date().getFullYear();
 
 const copyrightFooterP = document.getElementById('footer-copyright');
 
-copyrightFooterP.textContent = "© " + currentYear;
+copyrightFooterP.textContent = "© " + year;

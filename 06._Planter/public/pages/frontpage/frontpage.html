@@ -1,52 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/assets/images/plant.png">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="pages/frontpage/frontpage.css">
+    <h1>Planter</h1>
 
-    <title>Planter</title>
-</head>
+    <section id="add-plants">
+        
+        <input id="plants-list-search-input" list="plants-list">
+        <datalist id="plants-list">
+        </datalist>
 
-<body>
-    <nav>
-        <a href="/"><img id="logo" src="/assets/images/plant.png" alt="plant care logo">
-            <a href="/about">ABOUT</a>
-    </nav>
+        <button onclick="addPlant()">Add Plant</button>
+    </section>
 
+    <section id="plants">
+        <!-- todo show the list of plants being taken care of -->
+    </section>
 
-    <main>
-        <h1>Planter</h1>
-
-        <section id="add-plants">
-            <!-- find and add plants -->
-
-            <input id="plants-list-search-input" list="plants-list">
-            <datalist id="plants-list">
-            </datalist>
-
-            <button onClick="addplant()">Add Plant</button>
-
-        </section>
-
-        <section id="plants">
-            <!-- show the list of plants being taken care of -->
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p id="footer-copyright"></p>
-    </footer>
-
-
-    <script src="/assets/js/footer.js"></script>
-    <script src="/frontpage.js"></script>
-
-</body>
-
-</html>
+    <script src="/assets/js/escapeHTML.js"></script>
+    <script src="/pages/frontpage/frontpage.js"></script>

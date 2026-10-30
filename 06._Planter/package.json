@@ -1,19 +1,19 @@
 {
   "name": "planter",
   "version": "0.0.1",
-  "description": "A website for keeping track of plantcare",
+  "description": "A website for keeping track of plants care",
   "keywords": [
     "plants",
     "plant",
     "plant",
     "care",
-    "sunlight",
-    "nurture",
+    "nurturing",
     "nature",
-    "water"
+    "sunlight",
+    "watering"
   ],
-  "license": "ISC",
-  "author": "PigeonPC",
+  "license": "MIT",
+  "author": "Anders Latif",
   "type": "module",
   "main": "app.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "start-dev": "cross-env PORT=9090 nodemon app.js"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.3.0"
   },
   "devDependencies": {
     "cross-env": "^10.1.0"

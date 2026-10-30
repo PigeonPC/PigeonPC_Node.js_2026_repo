@@ -1,38 +1,29 @@
-body {
-    
-}
-
 #logo {
     width: 8vw;
     min-width: 8rem;
+    height: auto;
 }
 
-/* em */
-/* rem */
 
-
-
-/*
-nav {
-    height: 10vh;
+/* nav {
+    height: 15vh;
 }
 
 main {
-    min-height: calc(100vh - 15vh);
-
+    min-height: calc(100vh - 26vh);
 }
+
 
 footer {
     height: 5vh;
-}
-*/
+} */
 
 body {
     min-height: 95vh;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
 }
 
 main {
-    flex: 1;
+    flex: 1
 }

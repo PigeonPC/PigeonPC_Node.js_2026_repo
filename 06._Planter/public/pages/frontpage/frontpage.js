@@ -1,32 +1,46 @@
-fetch('api/plants')
-    .then((response) => response.json())
-    .then((result) => {
-        console.log(result)
+fetch('/api/plants')
+.then((response) => response.json())
+.then((result) => {
+    const plantsListDataList = document.getElementById('plants-list');
 
 
-        console.log(result.data);
-
-
-        result.data.forEach((plant) => {
-            const plantsListOption = document.createElement('option');
-            plantsListOption.value = plant.slug;;
-
-            plantsListDataList.appendChild(plantsListOption);
-        })
+    result.data.forEach((plant) => {
+        const plantsListOption = document.createElement('option');
+        plantsListOption.value = plant.slug;
+        
+        plantsListDataList.appendChild(plantsListOption);
     });
+});
 
-function addPlant() {
-    const plantName = document.getElementById('plants-list-search-input').value;
+async function addPlant() {
+    const plantSlug = document.getElementById('plants-list-search-input').value;
 
-    const plantSection = document.getElementById('plants');
+    const plantsSection = document.getElementById('plants');
 
+
+    const response = await fetch(`/api/plants/${plantSlug}`);
+    const result = await response.json();
+    const plant = result.data;
+
+    if (!plant) {
+        console.log("Did not find a plant. Please select a plant");
+    }
+
+    const imageURL = "https://www.plantsolve.com/" + sanitizeXSS(plant.featuredImage);
+    
+    console.log(plant);
+    
     const plantsDiv = document.createElement('div');
     plantsDiv.innerHTML = `
-        <h3>New Plant</h3>
-        `;
+        <h3>${sanitizeXSS(plantSlug)}</h3>
 
+        <h4>${sanitizeXSS(plant.care.watering)}</h4>
 
-    fetch ()
-    
- 
+        <img class="plant-image" src="${imageURL}" alt="Plant image ${plantSlug}">
+
+        <p>${sanitizeXSS(plant.quickAnswer)}</p>
+        
+    `;
+
+    plantsSection.appendChild(plantsDiv);
 }

@@ -9,7 +9,7 @@
 
 // Deklarere en variabel
 // RULE: Brug const når muligt, ellers brug let
-// Const betyder at det er contant in the assignment
+// Const betyder at det er constant in the assignment
 // er ikke immutable, men assignment er constant
 // const er ikke immutable, der kan stadig ændres i const
 
