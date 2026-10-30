@@ -68,3 +68,32 @@ license: (ISC)
 type: (commonjs) module
 
 Bagefter skriv npm install express
+
+____________________________
+
+MAKE A SVELTE APP:
+
+npm create vite@latest
+
+name
+package
+vælg SVELTE
+vælg Javascript
+
+
+______________________________
+
+
+cd 08._Svelte_Family
+npm install
+npm run dev
+
+localhost:5173
+
+### Når vi har lavet projektet
+vi sletter icon.svg fra /public
+sletter /lib og /assets
+sletter indhold i app.svelte
+
+
+
