@@ -1,19 +1,46 @@
 <script>
-    let { name, familySheep, isGirl, onShowLove, onEatCookie, cookieCount=$bindable() } = $props();
+    let {
+        name,
+        familySheep,
+        isGirl,
+        onShowLove,
+        onEatCookie,
+        cookieCount = $bindable(),
+    } = $props();
+
+    import { fridgeMessages } from "../../stores/fridgeMessagesStore.js";
+
+    let fridgeMessageInput = $state("");
+
+    function writeFridgeMessage() {
+        // fridgeMessages.set([...$fridgeMessages, {name, message:fridgeMessageInput}])
+
+        fridgeMessages.update((fridgeMessagesStoreValue) => {
+            fridgeMessagesStoreValue.push({name, message:fridgeMessageInput});
+            return fridgeMessagesStoreValue;
+        })
+
+        fridgeMessageInput = "";
+    }
 
 </script>
 
-<div class={familySheep || "not-a-sheep"} 
-    class:is-girl={isGirl} 
+<div
+    class={familySheep || "not-a-sheep"}
+    class:is-girl={isGirl}
     class:is-boy={!isGirl}
-    >
-
+>
     <h2>I am {name}</h2>
 
     <button onclick={() => onShowLove(name)}>Show loved</button>
     <button onclick={onEatCookie}>Eat Cookie</button>
 
+    <input bind:value={fridgeMessageInput}>
+    <button onclick={writeFridgeMessage}>Write fridge message</button>
+
 </div>
+
+
 
 <style>
     .black-sheep h2 {
@@ -38,5 +65,4 @@
         color: blue;
         background-color: pink;
     }
-
 </style>
