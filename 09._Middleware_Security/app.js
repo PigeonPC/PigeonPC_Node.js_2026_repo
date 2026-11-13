@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 import express from 'express';
 
 const app = express();
@@ -11,7 +13,7 @@ app.use(helmet());
 // *********************
 import session from 'express-session';
 app.use(session({
-    secret: 'keyboard cat', //put in .env
+    secret: process.env.SESSION_KEY, //put in .env
     resave: false, //Hvis der ikke er sket en ændring, så gem ikke session igen.
     saveUninitialized: false, //
     cookie: { secure: false } //Skal køre over https for at være secure!
